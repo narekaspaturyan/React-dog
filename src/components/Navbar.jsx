@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect, NavLink } from "react-router-dom";
 import propTypes from "prop-types";
+
 let log = console.log;
 const Navbar = (props) => {
   log(props);
@@ -11,7 +12,9 @@ const Navbar = (props) => {
         Navbar
       </a>
       <Link to="/counters"> go to counters </Link>
-      <Link to="/breeds"> go to breeds </Link>
+      <NavLink className="nav-item nav-link" to="/breeds">
+        go to breeds
+      </NavLink>
     </nav>
   );
 };

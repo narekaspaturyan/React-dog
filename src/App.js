@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Counters from "./components/Counters";
 import Navbar from "./components/Navbar";
-import DogBreads from "./DogBreeds";
+import DogBreeds from "./DogBreeds";
 import Like from "./common/Like";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
@@ -17,10 +17,10 @@ function App() {
           </main>
         </Route>
         <Route path="/breeds">
-          <DogBreads />
+          <DogBreeds />
         </Route>
         <Route path="/" exact={true}>
-          <DogBreads />
+          <DogBreeds />
         </Route>
         <Redirect to="/" />
       </Switch>
@@ -30,3 +30,7 @@ function App() {
 }
 
 export default App;
+
+////  <Route path="/counters" component={DogBreeds} />
+
+/// <Redirect from="/breeds" to="/counters" component={Counters} />; // from to
